@@ -6,7 +6,6 @@ This project is an Expo application developed as part of the AppMaker assignment
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
 - [Project Structure](#project-structure)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
@@ -46,11 +45,6 @@ This command will provide options to open the app in:
 - An [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
 - [Expo Go](https://expo.dev/client), a limited sandbox for trying out app development
 
-## Features
-
-- [List of key features of the application]
-- [E.g., User authentication, real-time updates, etc.]
-
 ## Project Structure
 
 The project's structure is organized as follows:
@@ -82,15 +76,14 @@ appmaker-assignment/
 ├── tsconfig.json
 ```
 
-- **app/**: [Description of the app directory]
-- **assets/**: [Description of the assets directory]
-- **components/**: [Description of the components directory]
-- **constants/**: [Description of the constants directory]
-- **context/useProduct/**: [Description of the context/useProduct directory]
-- **scripts/**: [Description of the scripts directory]
-- **src/types/**: [Description of the src/types directory]
-- **types/**: [Description of the types directory]
-- **utils/**: [Description of the utils directory]
+- **app/**: [Contains the page routing and modals]
+- **assets/**: [contains fonts and static images]
+- **components/**: [Components used in the layout]
+- **constants/**: [Contains constants used in the project]
+- **context/useProduct/**: [For Global State Management]
+- **scripts/**: [Contains script to reset the project]
+- **types/**: [Types defined for defining Props]
+- **utils/**: [Contains helper functions for common task]
 
 ## Dependencies
 
@@ -98,10 +91,14 @@ Key dependencies used in this project include:
 
 - [Expo](https://expo.dev/): A framework and platform for universal React applications.
 - [React](https://reactjs.org/): A JavaScript library for building user interfaces.
-- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
+- [NativeWind](https://www.nativewind.dev/): A utility-first CSS framework for React Native.
 - [TypeScript](https://www.typescriptlang.org/): A typed superset of JavaScript.
 
 For a complete list of dependencies, refer to the `package.json` file.
+
+## Screenshots
+
+![Alt text](./screenshots/long-shot.jpeg)
 
 ## Contributing
 
