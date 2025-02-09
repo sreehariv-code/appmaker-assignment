@@ -1,50 +1,118 @@
-# Welcome to your Expo app 👋
+# AppMaker Assignment
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is an Expo application developed as part of the AppMaker assignment. It serves as a [brief description of the app's purpose].
 
-## Get started
+## Table of Contents
 
-1. Install dependencies
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Dependencies](#dependencies)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/sreehariv-code/appmaker-assignment.git
+   cd appmaker-assignment
+   ```
+
+2. **Install dependencies:**
+
+   Ensure you have [Node.js](https://nodejs.org/) installed. Then, run:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+## Usage
 
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+To start the application, execute:
 
 ```bash
-npm run reset-project
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+This command will provide options to open the app in:
 
-## Learn more
+- A development build
+- An [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
+- An [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
+- [Expo Go](https://expo.dev/client), a limited sandbox for trying out app development
 
-To learn more about developing your project with Expo, look at the following resources:
+## Features
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- [List of key features of the application]
+- [E.g., User authentication, real-time updates, etc.]
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+The project's structure is organized as follows:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```
+appmaker-assignment/
+├── app/
+├── assets/
+├── components/
+├── constants/
+├── context/
+│   └── useProduct/
+├── scripts/
+├── src/
+│   └── types/
+├── types/
+├── utils/
+├── .gitignore
+├── README.md
+├── app.json
+├── babel.config.js
+├── global.css
+├── metro.config.js
+├── nativewind-dev.d.ts
+├── nativewind-env.d.ts
+├── package-lock.json
+├── package.json
+├── tailwind.config.js
+├── tsconfig.json
+```
+
+- **app/**: [Description of the app directory]
+- **assets/**: [Description of the assets directory]
+- **components/**: [Description of the components directory]
+- **constants/**: [Description of the constants directory]
+- **context/useProduct/**: [Description of the context/useProduct directory]
+- **scripts/**: [Description of the scripts directory]
+- **src/types/**: [Description of the src/types directory]
+- **types/**: [Description of the types directory]
+- **utils/**: [Description of the utils directory]
+
+## Dependencies
+
+Key dependencies used in this project include:
+
+- [Expo](https://expo.dev/): A framework and platform for universal React applications.
+- [React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [Tailwind CSS](https://tailwindcss.com/): A utility-first CSS framework.
+- [TypeScript](https://www.typescriptlang.org/): A typed superset of JavaScript.
+
+For a complete list of dependencies, refer to the `package.json` file.
+
+## Contributing
+
+Contributions are welcome! Please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch: `git checkout -b feature/YourFeature`
+3. Make your changes and commit them: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
