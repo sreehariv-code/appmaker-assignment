@@ -1,45 +1,41 @@
-import { PropsWithChildren, useState } from 'react';
-import { StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React, { useState } from "react";
+import { fontStyle } from "@/constants/font";
+import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
-import { Colors } from '@/constants/Colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+type CollapsibleProps = {
+  title?: string;
+  children: React.ReactNode;
+  initialCollapsed?: boolean;
+  className?: string;
+};
 
-export function Collapsible({ children, title }: PropsWithChildren & { title: string }) {
-  const [isOpen, setIsOpen] = useState(false);
-  const theme = useColorScheme() ?? 'light';
-
+export default function Collapsible({
+  title,
+  children,
+  initialCollapsed,
+  className,
+}: CollapsibleProps) {
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(
+    initialCollapsed ?? true
+  );
   return (
-    <ThemedView>
-      <TouchableOpacity
-        style={styles.heading}
-        onPress={() => setIsOpen((value) => !value)}
-        activeOpacity={0.8}>
-        <IconSymbol
-          name="chevron.right"
-          size={18}
-          weight="medium"
-          color={theme === 'light' ? Colors.light.icon : Colors.dark.icon}
-          style={{ transform: [{ rotate: isOpen ? '90deg' : '0deg' }] }}
-        />
-
-        <ThemedText type="defaultSemiBold">{title}</ThemedText>
-      </TouchableOpacity>
-      {isOpen && <ThemedView style={styles.content}>{children}</ThemedView>}
-    </ThemedView>
+    <View className={className}>
+      <View className="flex flex-row justify-between items-center">
+        <Text className="text-2xl text-text " style={[fontStyle.ManropeBold]}>
+          {title}
+        </Text>
+        <TouchableOpacity onPress={() => setIsCollapsed(!isCollapsed)}>
+          <View
+            style={{ transform: [{ rotate: isCollapsed ? "0deg" : "180deg" }] }}
+          >
+            <FontAwesome6 name="chevron-up" size={24} color="black" />
+          </View>
+        </TouchableOpacity>
+      </View>
+      {isCollapsed ? children : null}
+    </View>
   );
 }
 
-const styles = StyleSheet.create({
-  heading: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 6,
-  },
-  content: {
-    marginTop: 6,
-    marginLeft: 24,
-  },
-});
+const styles = StyleSheet.create({});
