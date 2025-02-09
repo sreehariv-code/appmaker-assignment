@@ -10,6 +10,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import Banner from "./Banner";
 
 export default function MainImageCarousel() {
   const { width } = Dimensions.get("window"); // Get screen width
@@ -27,8 +28,14 @@ export default function MainImageCarousel() {
   };
 
   return (
-    <View className="flex-1 min-h-[300px] bg-white justify-center items-center overflow-hidden">
-      {/* Image Carousel */}
+    <View className="flex-1 min-h-[300px] relative bg-white justify-center items-center overflow-hidden">
+      {/* Conditionally render the Banner only over the first image */}
+      {activeIndex === 0 && productDetails?.tags[0] && (
+        <View className="absolute z-10 top-10 left-0">
+          <Banner text={productDetails?.tags[0]} />
+        </View>
+      )}
+
       <ScrollView
         ref={scrollViewRef}
         horizontal

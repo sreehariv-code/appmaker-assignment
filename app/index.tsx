@@ -45,7 +45,6 @@ const index = () => {
         ref={scrollViewRef}
       >
         <MainImageCarousel />
-
         <ProductInfo
           name={productDetails?.name}
           price={productDetails?.price}

@@ -28,7 +28,7 @@ const ProductInfo = ({
   return (
     <View className="px-4">
       <View className="flex justify-between flex-row pt-4 items-center">
-        <Text style={{ fontFamily: "Manrope" }} className="text-primary">
+        <Text style={[fontStyle.ManropeRegular]} className="text-primary">
           {name}
         </Text>
         <TouchableOpacity

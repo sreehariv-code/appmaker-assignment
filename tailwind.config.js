@@ -12,9 +12,6 @@ module.exports = {
         "neutral-40": "#E0E0E0",
         alert: "#E44A4A",
       },
-      fontFamily: {
-        manrope: ["Manrope", "sans-serif"],
-      },
     },
   },
   plugins: [],

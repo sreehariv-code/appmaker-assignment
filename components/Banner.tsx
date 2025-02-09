@@ -1,71 +1,47 @@
+import { fontStyle } from "@/constants/font";
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-export default function Banner() {
+const Banner = ({ text }: { text: string }) => {
   return (
     <View style={styles.container}>
-      {/* Main Banner */}
       <View style={styles.banner}>
-        <Text style={styles.text}>Best Seller</Text>
+        <Text
+          className="text-lg"
+          style={[styles.text, fontStyle.ManropeSemibold]}
+        >
+          {text}
+        </Text>
+        <View style={styles.ribbonEdge} />
       </View>
-
-      <View style={styles.triangle} />
-      <View style={styles.roundedCornerTop} />
-      <View style={styles.roundedCornerBottom} />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
-    alignSelf: "flex-start",
-    position: "relative",
-    margin: 10,
+    alignItems: "flex-start",
   },
   banner: {
-    backgroundColor: "#e44a4a",
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    flexDirection: "row",
-    alignItems: "center",
-    borderTopLeftRadius: 10,
-    borderBottomLeftRadius: 10,
+    backgroundColor: "#E44A4A",
+    paddingHorizontal: 15,
+    paddingVertical: 10,
+    borderRadius: 5,
+    position: "relative",
+    width: 130,
   },
   text: {
-    color: "white",
-    fontSize: 16,
-    fontWeight: "bold",
+    color: "#fff",
   },
-  triangle: {
+  ribbonEdge: {
     position: "absolute",
-    right: -15,
-    top: 0,
-    bottom: 0,
-    width: 0,
-    height: 0,
-    borderLeftWidth: 15,
-    borderRightWidth: 15,
-    borderBottomWidth: 30,
-    borderLeftColor: "transparent",
-    borderRightColor: "transparent",
-    borderBottomColor: "#a32d2d",
-  },
-  roundedCornerTop: {
-    position: "absolute",
-    right: -12,
-    top: -2,
-    width: 8,
-    height: 8,
-    backgroundColor: "#a32d2d",
-    borderRadius: 4,
-  },
-  roundedCornerBottom: {
-    position: "absolute",
-    right: -12,
-    bottom: -2,
-    width: 8,
-    height: 8,
-    backgroundColor: "#a32d2d",
-    borderRadius: 4,
+    right: -10,
+    top: "50%",
+    width: 20,
+    aspectRatio: 1 / 1,
+    backgroundColor: "white",
+    transform: [{ rotate: "45deg" }],
   },
 });
+
+export default Banner;
