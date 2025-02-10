@@ -1,6 +1,6 @@
 # AppMaker Assignment
 
-This project is an Expo application developed as part of the AppMaker assignment. It serves as a [brief description of the app's purpose].
+This project is an Expo application developed as part of the AppMaker assignment.
 
 ## Table of Contents
 
@@ -109,7 +109,3 @@ Contributions are welcome! Please follow these steps:
 3. Make your changes and commit them: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin feature/YourFeature`
 5. Submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
